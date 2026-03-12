@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Service – Canis</title>
+
+<style>
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    line-height: 1.6;
+    margin: 40px auto;
+    max-width: 800px;
+    padding: 0 20px;
+    color: #222;
+}
+
+header {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+button.lang-switch {
+    margin-left: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+h1 { font-size: 32px; margin-bottom: 30px; }
+h2 { margin-top: 35px; font-size: 22px; }
+p { margin-top: 10px; }
+ul { margin-top: 10px; padding-left: 20px; }
+li { margin-bottom: 6px; }
+footer { margin-top: 50px; font-size: 14px; color: #666; }
+.lang { display: none; }
+.lang.active { display: block; }
+</style>
+
+</head>
+<body>
+
+<header>
+<button class="lang-switch" onclick="switchLang('de')">Deutsch</button>
+<button class="lang-switch" onclick="switchLang('en')">English</button>
+</header>
+
+<!-- German Content -->
+<div class="lang" id="de">
+<h1>Nutzungsbedingungen</h1>
+
+<h2>1. Geltungsbereich</h2>
+<p>Diese Nutzungsbedingungen regeln die Nutzung der mobilen Anwendung <strong>Canis</strong> („App“), die von <strong>Marc Busch</strong> betrieben wird.</p>
+<p>Durch die Nutzung der App erklären Sie sich mit diesen Nutzungsbedingungen einverstanden. Wenn Sie nicht einverstanden sind, dürfen Sie die App nicht nutzen.</p>
+
+<h2>2. Leistungsbeschreibung</h2>
+<p>Die App bietet digitale Unterstützung für das Hundetraining und stellt unter anderem folgende Funktionen bereit:</p>
+<ul>
+<li>Erstellung personalisierter Trainingspläne</li>
+<li>Bereitstellung von Trainingsübungen</li>
+<li>Analyse von Trainingsvideos</li>
+<li>KI-basierte Verbesserungsvorschläge für das Training</li>
+</ul>
+<p>Die Inhalte dienen ausschließlich zu Informations- und Trainingszwecken. Sie ersetzen keine professionelle Hundetrainingsberatung oder tiermedizinische Beratung.</p>
+
+<h2>3. Nutzerkonto</h2>
+<p>Für bestimmte Funktionen ist ein Nutzerkonto erforderlich. Sie sind verpflichtet, bei der Registrierung wahrheitsgemäße Angaben zu machen und Ihre Zugangsdaten vertraulich zu behandeln.</p>
+
+<h2>4. Nutzung der App</h2>
+<p>Sie verpflichten sich, die App ausschließlich im Einklang mit geltendem Recht zu nutzen. Insbesondere ist es Ihnen untersagt:</p>
+<ul>
+<li>rechtswidrige Inhalte hochzuladen oder zu verbreiten</li>
+<li>Inhalte hochzuladen, die Rechte Dritter verletzen</li>
+<li>die App missbräuchlich zu nutzen</li>
+</ul>
+<p>Der Betreiber behält sich vor, Inhalte zu entfernen oder Nutzerkonten zu sperren, wenn gegen diese Nutzungsbedingungen verstoßen wird.</p>
+
+<h2>5. KI-Hinweis</h2>
+<p>Die App <strong>Canis</strong> verwendet künstliche Intelligenz (KI), um Inhalte wie Videoanalysen, Einschätzungen zum Verhalten von Hunden sowie Trainingsvorschläge zu generieren.</p>
+<p>Die Analysen können unvollständig oder fehlerhaft sein und dienen ausschließlich zu Informations- und Lernzwecken.</p>
+<p>Die Inhalte stellen keine professionelle Hundetrainingsberatung dar und ersetzen keine individuelle Beratung durch qualifizierte Hundetrainer.</p>
+<p>Die Anwendung der Trainingshinweise erfolgt auf eigene Verantwortung des Nutzers.</p>
+
+<h2>6. Geistiges Eigentum</h2>
+<p>Alle Inhalte der App, einschließlich Texte, Grafiken, Logos, Software und sonstiger Materialien, sind urheberrechtlich geschützt und Eigentum des Betreibers oder entsprechender Lizenzgeber. Eine Vervielfältigung, Verbreitung oder Nutzung ohne Zustimmung ist untersagt.</p>
+
+<h2>7. Verfügbarkeit der Dienste</h2>
+<p>Der Betreiber bemüht sich um eine unterbrechungsfreie Verfügbarkeit der App, kann jedoch keine dauerhafte Funktionsfähigkeit garantieren. Wartungen oder Störungen können zu zeitweisen Einschränkungen führen.</p>
+
+<h2>8. Haftungsbeschränkung</h2>
+<p>Die Nutzung erfolgt auf eigene Verantwortung. Der Betreiber haftet nicht für Schäden aus Nutzung oder Nichtverfügbarkeit der App, soweit gesetzlich zulässig.</p>
+
+<h2>9. Änderungen der Leistungen</h2>
+<p>Der Betreiber behält sich vor, Funktionen oder Inhalte jederzeit zu ändern, zu erweitern oder einzustellen.</p>
+
+<h2>10. Kündigung</h2>
+<p>Sie können Ihr Nutzerkonto jederzeit löschen. Der Betreiber kann Konten bei Verstößen sperren oder löschen.</p>
+
+<h2>11. Datenschutz</h2>
+<p>Informationen zur Verarbeitung personenbezogener Daten finden Sie in unserer <a href="/Canis-Legal/privacy-policy">Datenschutzerklärung</a>.</p>
+
+<h2>12. Kontakt</h2>
+<p>Bei Fragen zu diesen Nutzungsbedingungen: canisapp.official@gmail.com</p>
+
+<h2>13. Anwendbares Recht</h2>
+<p>Es gilt das Recht der Bundesrepublik Deutschland, soweit gesetzlich zulässig.</p>
+
+<footer>
+<p>Stand: März 2026</p>
+</footer>
+</div>
+
+<!-- English Content -->
+<div class="lang" id="en">
+<h1>Terms of Service</h1>
+
+<h2>1. Scope</h2>
+<p>These Terms of Service govern the use of the mobile application <strong>Canis</strong> ("App"), operated by <strong>Marc Busch</strong>.</p>
+<p>By using the App, you agree to these Terms. If you do not agree, you may not use the App.</p>
+
+<h2>2. Description of Services</h2>
+<p>The App provides digital assistance for dog training, including:</p>
+<ul>
+<li>Creation of personalized training plans</li>
+<li>Provision of training exercises</li>
+<li>Analysis of training videos</li>
+<li>AI-powered improvement suggestions for training</li>
+</ul>
+<p>The content is provided for informational and training purposes only. It does not replace professional dog training or veterinary advice.</p>
+
+<h2>3. User Account</h2>
+<p>Some features require a user account. You are responsible for providing accurate information and keeping your login credentials confidential.</p>
+
+<h2>4. Use of the App</h2>
+<p>You agree to use the App in compliance with applicable law. In particular, you must not:</p>
+<ul>
+<li>upload or distribute illegal content</li>
+<li>upload content that infringes third-party rights</li>
+<li>misuse the App in any way</li>
+</ul>
+<p>The operator reserves the right to remove content or suspend accounts in case of violations.</p>
+
+<h2>5. AI Notice</h2>
+<p>The App <strong>Canis</strong> uses artificial intelligence (AI) to generate content such as video analyses, assessments of dog behavior, and training suggestions.</p>
+<p>The analyses may be incomplete or inaccurate and are for informational and educational purposes only.</p>
+<p>The content does not constitute professional dog training advice and does not replace individual guidance by qualified dog trainers.</p>
+<p>Application of training suggestions is at the user's own risk.</p>
+
+<h2>6. Intellectual Property</h2>
+<p>All content of the App, including text, graphics, logos, software, and other materials, is protected by copyright and owned by the operator or its licensors. Reproduction or use without consent is prohibited.</p>
+
+<h2>7. Availability of Services</h2>
+<p>The operator strives to ensure uninterrupted availability of the App but cannot guarantee permanent functionality. Maintenance or technical issues may result in temporary limitations.</p>
+
+<h2>8. Limitation of Liability</h2>
+<p>Use of the App is at your own risk. The operator is not liable for damages arising from use or unavailability of the App, to the extent permitted by law.</p>
+
+<h2>9. Changes to Services</h2>
+<p>The operator may change, expand, or discontinue functions or content at any time.</p>
+
+<h2>10. Termination</h2>
+<p>You may delete your account at any time. The operator may suspend or delete accounts in case of violations.</p>
+
+<h2>11. Privacy</h2>
+<p>Information on how personal data is processed can be found in our <a href="/Canis-Legal/privacy-policy">Privacy Policy</a>.</p>
+
+<h2>12. Contact</h2>
+<p>For questions regarding these Terms: canisapp.official@gmail.com</p>
+
+<h2>13. Governing Law</h2>
+<p>The laws of the Federal Republic of Germany apply, as far as legally permissible.</p>
+
+<footer>
+<p>Version: March 2026</p>
+</footer>
+</div>
+
+<script>
+function switchLang(lang){
+
+document.querySelectorAll('.lang').forEach(el => {
+el.classList.remove('active');
+});
+
+document.getElementById(lang).classList.add('active');
+
+}
+
+// URL Parameter lesen
+const params = new URLSearchParams(window.location.search);
+const langParam = params.get("lang");
+
+if(langParam === "de" || langParam === "en"){
+switchLang(langParam);
+} else {
+
+// Fallback: Browser-Sprache
+const userLang = navigator.language || navigator.userLanguage;
+
+if(userLang.startsWith('de')){
+switchLang('de');
+} else {
+switchLang('en');
+}
+
+}
+</script>
+
+</body>
+</html>
