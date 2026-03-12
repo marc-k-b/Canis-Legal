@@ -1,2 +1,0 @@
-# canis-legal
-Canis Legal
