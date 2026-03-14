@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canis - Intelligentes Hundetraining</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .lang-en { display: none; }
+    </style>
+    <script>
+        function toggleLang(lang) {
+            document.querySelectorAll('.lang-de').forEach(el => el.style.display = lang === 'de' ? 'block' : 'none');
+            document.querySelectorAll('.lang-en').forEach(el => el.style.display = lang === 'en' ? 'block' : 'none');
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans">
+    <!-- Language Switcher -->
+    <div class="fixed top-4 right-4 z-50 bg-white p-2 rounded-xl shadow-lg border border-slate-200">
+        <button onclick="toggleLang('de')" class="px-2 font-bold text-teal-600">DE</button>
+        <button onclick="toggleLang('en')" class="px-2 font-bold text-teal-600">EN</button>
+    </div>
+
+    <!-- Hero -->
+    <header class="py-20 px-6 text-center bg-white">
+        <h1 class="text-5xl font-bold mb-4 lang-de">Canis: Dein Hundetraining, neu gedacht.</h1>
+        <h1 class="text-5xl font-bold mb-4 lang-en">Canis: Dog training, reimagined.</h1>
+        <p class="text-xl mb-8 text-slate-600 lang-de">KI-gestütztes Training für eine glückliche Beziehung.</p>
+        <p class="text-xl mb-8 text-slate-600 lang-en">AI-powered training for a happy relationship.</p>
+        <a href="#" class="inline-block bg-teal-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-teal-700 transition">Download App</a>
+    </header>
+
+    <!-- Features -->
+    <section class="py-20 px-6">
+        <h2 class="text-3xl font-bold text-center mb-12 lang-de">Was Canis bietet</h2>
+        <h2 class="text-3xl font-bold text-center mb-12 lang-en">What Canis offers</h2>
+        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                <h3 class="font-bold text-xl mb-2 lang-de">KI-Video-Feedback</h3>
+                <h3 class="font-bold text-xl mb-2 lang-en">AI Video Feedback</h3>
+                <p class="text-slate-600 lang-de">Erhalte sofortige Tipps für dein Training.</p>
+                <p class="text-slate-600 lang-en">Get instant tips for your training.</p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                <h3 class="font-bold text-xl mb-2 lang-de">Strukturierte Pläne</h3>
+                <h3 class="font-bold text-xl mb-2 lang-en">Structured Plans</h3>
+                <p class="text-slate-600 lang-de">Individuelle Trainingspläne für deinen Hund.</p>
+                <p class="text-slate-600 lang-en">Custom training plans for your dog.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-10 px-6 text-center text-slate-500 text-sm">
+        <div class="space-x-4 mb-4">
+            <a href="#" class="hover:text-teal-600 lang-de">Impressum</a>
+            <a href="#" class="hover:text-teal-600 lang-en">Imprint</a>
+            <a href="#" class="hover:text-teal-600 lang-de">Datenschutz</a>
+            <a href="#" class="hover:text-teal-600 lang-en">Privacy Policy</a>
+        </div>
+        <p>&copy; 2026 Canis App</p>
+    </footer>
+</body>
+</html>
