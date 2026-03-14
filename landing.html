@@ -1,65 +1,330 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Canis - Intelligentes Hundetraining</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        .lang-en { display: none; }
-    </style>
-    <script>
-        function toggleLang(lang) {
-            document.querySelectorAll('.lang-de').forEach(el => el.style.display = lang === 'de' ? 'block' : 'none');
-            document.querySelectorAll('.lang-en').forEach(el => el.style.display = lang === 'en' ? 'block' : 'none');
-        }
-    </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Canis – KI Hundetraining</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+body{
+font-family:'Inter',sans-serif;
+background:#f8fafc;
+color:#1c1c1c;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:40px 20px;
+}
+
+/* HERO */
+
+.hero{
+background:linear-gradient(135deg,#01998D,#016e66);
+color:white;
+padding:120px 20px;
+}
+
+.hero-inner{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:60px;
+max-width:1200px;
+margin:auto;
+}
+
+.hero h1{
+font-size:52px;
+line-height:1.1;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:20px;
+opacity:0.9;
+}
+
+.cta{
+margin-top:30px;
+display:flex;
+gap:15px;
+}
+
+.button{
+background:white;
+color:#01998D;
+padding:14px 26px;
+border-radius:12px;
+font-weight:600;
+text-decoration:none;
+}
+
+.button.secondary{
+background:rgba(255,255,255,0.2);
+color:white;
+}
+
+/* IPHONE MOCKUP */
+
+.phone{
+width:280px;
+border-radius:40px;
+background:black;
+padding:10px;
+box-shadow:0 30px 60px rgba(0,0,0,0.3);
+}
+
+.phone img{
+width:100%;
+border-radius:30px;
+display:block;
+}
+
+/* FEATURES */
+
+.features{
+padding:100px 20px;
+}
+
+.feature-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+margin-top:60px;
+}
+
+.feature{
+background:white;
+padding:30px;
+border-radius:18px;
+box-shadow:0 10px 30px rgba(0,0,0,0.05);
+}
+
+.feature h3{
+margin-bottom:10px;
+font-size:20px;
+}
+
+/* SCREENSHOTS */
+
+.screens{
+padding:100px 20px;
+text-align:center;
+}
+
+.screenshot-row{
+margin-top:60px;
+display:flex;
+justify-content:center;
+gap:40px;
+flex-wrap:wrap;
+}
+
+.screenshot{
+width:230px;
+border-radius:30px;
+box-shadow:0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* CTA */
+
+.download{
+background:#01998D;
+color:white;
+text-align:center;
+padding:100px 20px;
+}
+
+.download h2{
+font-size:36px;
+margin-bottom:20px;
+}
+
+.store-buttons{
+margin-top:30px;
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.store-buttons img{
+height:55px;
+}
+
+/* FOOTER */
+
+.footer{
+text-align:center;
+padding:40px;
+font-size:14px;
+color:#777;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.hero-inner{
+flex-direction:column;
+text-align:center;
+}
+
+.hero h1{
+font-size:38px;
+}
+
+}
+
+</style>
 </head>
-<body class="bg-slate-50 text-slate-900 font-sans">
-    <!-- Language Switcher -->
-    <div class="fixed top-4 right-4 z-50 bg-white p-2 rounded-xl shadow-lg border border-slate-200">
-        <button onclick="toggleLang('de')" class="px-2 font-bold text-teal-600">DE</button>
-        <button onclick="toggleLang('en')" class="px-2 font-bold text-teal-600">EN</button>
-    </div>
 
-    <!-- Hero -->
-    <header class="py-20 px-6 text-center bg-white">
-        <h1 class="text-5xl font-bold mb-4 lang-de">Canis: Dein Hundetraining, neu gedacht.</h1>
-        <h1 class="text-5xl font-bold mb-4 lang-en">Canis: Dog training, reimagined.</h1>
-        <p class="text-xl mb-8 text-slate-600 lang-de">KI-gestütztes Training für eine glückliche Beziehung.</p>
-        <p class="text-xl mb-8 text-slate-600 lang-en">AI-powered training for a happy relationship.</p>
-        <a href="#" class="inline-block bg-teal-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-teal-700 transition">Download App</a>
-    </header>
+<body>
 
-    <!-- Features -->
-    <section class="py-20 px-6">
-        <h2 class="text-3xl font-bold text-center mb-12 lang-de">Was Canis bietet</h2>
-        <h2 class="text-3xl font-bold text-center mb-12 lang-en">What Canis offers</h2>
-        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
-                <h3 class="font-bold text-xl mb-2 lang-de">KI-Video-Feedback</h3>
-                <h3 class="font-bold text-xl mb-2 lang-en">AI Video Feedback</h3>
-                <p class="text-slate-600 lang-de">Erhalte sofortige Tipps für dein Training.</p>
-                <p class="text-slate-600 lang-en">Get instant tips for your training.</p>
-            </div>
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
-                <h3 class="font-bold text-xl mb-2 lang-de">Strukturierte Pläne</h3>
-                <h3 class="font-bold text-xl mb-2 lang-en">Structured Plans</h3>
-                <p class="text-slate-600 lang-de">Individuelle Trainingspläne für deinen Hund.</p>
-                <p class="text-slate-600 lang-en">Custom training plans for your dog.</p>
-            </div>
-        </div>
-    </section>
+<!-- HERO -->
 
-    <!-- Footer -->
-    <footer class="py-10 px-6 text-center text-slate-500 text-sm">
-        <div class="space-x-4 mb-4">
-            <a href="#" class="hover:text-teal-600 lang-de">Impressum</a>
-            <a href="#" class="hover:text-teal-600 lang-en">Imprint</a>
-            <a href="#" class="hover:text-teal-600 lang-de">Datenschutz</a>
-            <a href="#" class="hover:text-teal-600 lang-en">Privacy Policy</a>
-        </div>
-        <p>&copy; 2026 Canis App</p>
-    </footer>
+<section class="hero">
+
+<div class="hero-inner">
+
+<div>
+
+<h1>KI-gestütztes Hundetraining</h1>
+
+<p>
+Analysiere Training, erhalte Feedback und verbessere dein Hundetraining
+mit individueller KI-Unterstützung.
+</p>
+
+<div class="cta">
+
+<a class="button" href="#">
+App laden
+</a>
+
+<a class="button secondary" href="#">
+Mehr erfahren
+</a>
+
+</div>
+
+</div>
+
+<div class="phone">
+<img src="screenshot1.png" alt="App Screenshot">
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FEATURES -->
+
+<section class="features container">
+
+<h2 style="text-align:center;font-size:34px;">
+Alles für effektives Hundetraining
+</h2>
+
+<div class="feature-grid">
+
+<div class="feature">
+<h3>🎥 Videoanalyse</h3>
+<p>Die KI analysiert dein Training und erkennt Timing,
+Körpersprache und Trainingsstruktur.</p>
+</div>
+
+<div class="feature">
+<h3>📊 Fortschrittsanalyse</h3>
+<p>Verfolge deine Trainingsentwicklung und erkenne,
+was wirklich funktioniert.</p>
+</div>
+
+<div class="feature">
+<h3>📅 Trainingspläne</h3>
+<p>Individuelle Trainingspläne,
+angepasst an dein Trainingsziel.</p>
+</div>
+
+<div class="feature">
+<h3>🤖 KI-Feedback</h3>
+<p>Erhalte konkrete Verbesserungsvorschläge
+für jede Übung.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SCREENSHOTS -->
+
+<section class="screens">
+
+<h2 style="font-size:34px;">
+Ein Blick in die App
+</h2>
+
+<div class="screenshot-row">
+
+<img class="screenshot" src="screenshot1.png">
+<img class="screenshot" src="screenshot2.png">
+<img class="screenshot" src="screenshot3.png">
+
+</div>
+
+</section>
+
+
+<!-- DOWNLOAD -->
+
+<section class="download">
+
+<h2>
+Starte dein Training heute
+</h2>
+
+<p>
+Lade Canis herunter und verbessere dein Hundetraining
+mit KI-Unterstützung.
+</p>
+
+<div class="store-buttons">
+
+<img src="appstore.png">
+<img src="playstore.png">
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<div class="footer">
+
+© 2026 Canis
+
+<br><br>
+
+<a href="imprint.html">Impressum</a> |
+<a href="privacy-policy.html">Datenschutz</a> |
+<a href="terms-of-service.html">Nutzungsbedingungen</a>
+
+</div>
+
 </body>
 </html>
