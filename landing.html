@@ -10,14 +10,9 @@
 
 <style>
 
-*{
-box-sizing:border-box;
-margin:0;
-padding:0;
-}
-
 body{
 font-family:'Inter',sans-serif;
+margin:0;
 background:#f8fafc;
 color:#1c1c1c;
 }
@@ -28,7 +23,27 @@ margin:auto;
 padding:40px 20px;
 }
 
-/* HERO */
+/* language switch */
+
+.lang-switch{
+position:fixed;
+top:20px;
+right:20px;
+background:white;
+padding:8px 12px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.lang-switch button{
+border:none;
+background:none;
+font-weight:600;
+cursor:pointer;
+margin:0 4px;
+}
+
+/* hero */
 
 .hero{
 background:linear-gradient(135deg,#01998D,#016e66);
@@ -71,13 +86,6 @@ font-weight:600;
 text-decoration:none;
 }
 
-.button.secondary{
-background:rgba(255,255,255,0.2);
-color:white;
-}
-
-/* IPHONE MOCKUP */
-
 .phone{
 width:280px;
 border-radius:40px;
@@ -89,10 +97,9 @@ box-shadow:0 30px 60px rgba(0,0,0,0.3);
 .phone img{
 width:100%;
 border-radius:30px;
-display:block;
 }
 
-/* FEATURES */
+/* features */
 
 .features{
 padding:100px 20px;
@@ -114,10 +121,9 @@ box-shadow:0 10px 30px rgba(0,0,0,0.05);
 
 .feature h3{
 margin-bottom:10px;
-font-size:20px;
 }
 
-/* SCREENSHOTS */
+/* screenshots */
 
 .screens{
 padding:100px 20px;
@@ -138,7 +144,7 @@ border-radius:30px;
 box-shadow:0 20px 40px rgba(0,0,0,0.15);
 }
 
-/* CTA */
+/* download */
 
 .download{
 background:#01998D;
@@ -147,24 +153,18 @@ text-align:center;
 padding:100px 20px;
 }
 
-.download h2{
-font-size:36px;
-margin-bottom:20px;
-}
-
 .store-buttons{
 margin-top:30px;
 display:flex;
 justify-content:center;
 gap:20px;
-flex-wrap:wrap;
 }
 
 .store-buttons img{
 height:55px;
 }
 
-/* FOOTER */
+/* footer */
 
 .footer{
 text-align:center;
@@ -173,25 +173,16 @@ font-size:14px;
 color:#777;
 }
 
-/* MOBILE */
-
-@media(max-width:900px){
-
-.hero-inner{
-flex-direction:column;
-text-align:center;
-}
-
-.hero h1{
-font-size:38px;
-}
-
-}
-
 </style>
 </head>
 
 <body>
+
+<div class="lang-switch">
+<button onclick="setLang('de')">DE</button> |
+<button onclick="setLang('en')">EN</button>
+</div>
+
 
 <!-- HERO -->
 
@@ -201,21 +192,21 @@ font-size:38px;
 
 <div>
 
-<h1>KI-gestütztes Hundetraining</h1>
+<h1 data-de="Individuelles Hundetraining mit KI"
+data-en="AI-powered dog training">
+Individuelles Hundetraining mit KI
+</h1>
 
-<p>
-Analysiere Training, erhalte Feedback und verbessere dein Hundetraining
-mit individueller KI-Unterstützung.
+<p data-de="Canis erstellt personalisierte Trainingspläne für dich und deinen Hund – basierend auf Rasse, Alter, Trainingsstand, bekannten Problemen und deinem bevorzugten Trainingsumfeld."
+data-en="Canis creates personalized training plans for you and your dog – based on breed, age, training level, known challenges and your preferred training environment.">
 </p>
 
 <div class="cta">
 
-<a class="button" href="#">
+<a class="button"
+data-de="App laden"
+data-en="Download App">
 App laden
-</a>
-
-<a class="button secondary" href="#">
-Mehr erfahren
 </a>
 
 </div>
@@ -223,7 +214,7 @@ Mehr erfahren
 </div>
 
 <div class="phone">
-<img src="screenshot1.png" alt="App Screenshot">
+<img src="screenshot1.png">
 </div>
 
 </div>
@@ -235,34 +226,58 @@ Mehr erfahren
 
 <section class="features container">
 
-<h2 style="text-align:center;font-size:34px;">
-Alles für effektives Hundetraining
+<h2 style="text-align:center;font-size:34px;"
+data-de="Trainingspläne, die wirklich zu deinem Hund passen"
+data-en="Training plans tailored to your dog">
 </h2>
 
 <div class="feature-grid">
 
 <div class="feature">
-<h3>🎥 Videoanalyse</h3>
-<p>Die KI analysiert dein Training und erkennt Timing,
-Körpersprache und Trainingsstruktur.</p>
+
+<h3 data-de="🐕 Individuelle Analyse"
+data-en="🐕 Individual analysis"></h3>
+
+<p data-de="Die KI berücksichtigt Rasse, Alter, Trainingsstand und bekannte Schwierigkeiten deines Hundes."
+data-en="The AI considers your dog's breed, age, training level and known challenges.">
+</p>
+
 </div>
 
-<div class="feature">
-<h3>📊 Fortschrittsanalyse</h3>
-<p>Verfolge deine Trainingsentwicklung und erkenne,
-was wirklich funktioniert.</p>
-</div>
 
 <div class="feature">
-<h3>📅 Trainingspläne</h3>
-<p>Individuelle Trainingspläne,
-angepasst an dein Trainingsziel.</p>
+
+<h3 data-de="📅 Dynamische Trainingspläne"
+data-en="📅 Dynamic training plans"></h3>
+
+<p data-de="Dein Trainingsplan wird automatisch angepasst – abhängig von Fortschritt, Feedback und Trainingsverlauf."
+data-en="Your training plan adapts automatically based on progress, feedback and training history.">
+</p>
+
 </div>
 
+
 <div class="feature">
-<h3>🤖 KI-Feedback</h3>
-<p>Erhalte konkrete Verbesserungsvorschläge
-für jede Übung.</p>
+
+<h3 data-de="🎥 Videoanalyse"
+data-en="🎥 Video analysis"></h3>
+
+<p data-de="Lade Trainingsvideos hoch und erhalte detailliertes Feedback zu Timing, Körpersprache und Trainingsstruktur."
+data-en="Upload training videos and receive detailed feedback about timing, body language and training structure.">
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<h3 data-de="📍 Trainingsumgebung"
+data-en="📍 Training environment"></h3>
+
+<p data-de="Ob Wohnung, Garten oder Hundeplatz – die KI berücksichtigt deinen bevorzugten Trainingsort."
+data-en="Whether at home, in the garden or on a training field – the AI adapts to your training environment.">
+</p>
+
 </div>
 
 </div>
@@ -274,9 +289,8 @@ für jede Übung.</p>
 
 <section class="screens">
 
-<h2 style="font-size:34px;">
-Ein Blick in die App
-</h2>
+<h2 data-de="Ein Blick in die App"
+data-en="Take a look inside the app"></h2>
 
 <div class="screenshot-row">
 
@@ -293,14 +307,11 @@ Ein Blick in die App
 
 <section class="download">
 
-<h2>
-Starte dein Training heute
-</h2>
+<h2 data-de="Starte dein Training heute"
+data-en="Start your training today"></h2>
 
-<p>
-Lade Canis herunter und verbessere dein Hundetraining
-mit KI-Unterstützung.
-</p>
+<p data-de="Verbessere dein Hundetraining mit personalisierten KI-Trainingsplänen."
+data-en="Improve your dog training with personalized AI training plans."></p>
 
 <div class="store-buttons">
 
@@ -312,8 +323,6 @@ mit KI-Unterstützung.
 </section>
 
 
-<!-- FOOTER -->
-
 <div class="footer">
 
 © 2026 Canis
@@ -322,9 +331,25 @@ mit KI-Unterstützung.
 
 <a href="imprint.html">Impressum</a> |
 <a href="privacy-policy.html">Datenschutz</a> |
-<a href="terms-of-service.html">Nutzungsbedingungen</a>
+<a href="terms-of-service.html">Terms</a>
 
 </div>
+
+
+<script>
+
+function setLang(lang){
+
+document.querySelectorAll("[data-de]").forEach(el=>{
+
+el.innerText = el.getAttribute("data-"+lang)
+
+})
+
+}
+
+</script>
+
 
 </body>
 </html>
