@@ -10,37 +10,54 @@
 
 <style>
 
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
 body{
 font-family:'Inter',sans-serif;
-margin:0;
 background:#f8fafc;
 color:#1c1c1c;
 }
 
-.container{
-max-width:1200px;
-margin:auto;
-padding:40px 20px;
+/* language */
+
+.lang{
+display:none;
 }
 
-/* language switch */
+.lang.active{
+display:block;
+}
+
+/* language switcher */
 
 .lang-switch{
 position:fixed;
 top:20px;
 right:20px;
 background:white;
-padding:8px 12px;
+padding:8px 14px;
 border-radius:10px;
 box-shadow:0 5px 15px rgba(0,0,0,0.1);
+font-weight:600;
+z-index:10;
 }
 
-.lang-switch button{
-border:none;
-background:none;
-font-weight:600;
-cursor:pointer;
+.lang-switch a{
+text-decoration:none;
+color:#01998D;
 margin:0 4px;
+}
+
+/* layout */
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:40px 20px;
 }
 
 /* hero */
@@ -73,8 +90,6 @@ opacity:0.9;
 
 .cta{
 margin-top:30px;
-display:flex;
-gap:15px;
 }
 
 .button{
@@ -85,6 +100,8 @@ border-radius:12px;
 font-weight:600;
 text-decoration:none;
 }
+
+/* iphone mockup */
 
 .phone{
 width:280px;
@@ -153,6 +170,11 @@ text-align:center;
 padding:100px 20px;
 }
 
+.download h2{
+font-size:36px;
+margin-bottom:20px;
+}
+
 .store-buttons{
 margin-top:30px;
 display:flex;
@@ -173,14 +195,29 @@ font-size:14px;
 color:#777;
 }
 
+/* mobile */
+
+@media(max-width:900px){
+
+.hero-inner{
+flex-direction:column;
+text-align:center;
+}
+
+.hero h1{
+font-size:38px;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
 <div class="lang-switch">
-<button onclick="setLang('de')">DE</button> |
-<button onclick="setLang('en')">EN</button>
+<a href="?lang=de">DE</a> |
+<a href="?lang=en">EN</a>
 </div>
 
 
@@ -192,21 +229,41 @@ color:#777;
 
 <div>
 
-<h1 data-de="Individuelles Hundetraining mit KI"
-data-en="AI-powered dog training">
+<h1>
+
+<span class="lang" id="de">
 Individuelles Hundetraining mit KI
+</span>
+
+<span class="lang" id="en">
+AI-powered dog training
+</span>
+
 </h1>
 
-<p data-de="Canis erstellt personalisierte Trainingspläne für dich und deinen Hund – basierend auf Rasse, Alter, Trainingsstand, bekannten Problemen und deinem bevorzugten Trainingsumfeld."
-data-en="Canis creates personalized training plans for you and your dog – based on breed, age, training level, known challenges and your preferred training environment.">
+<p>
+
+<span class="lang" id="de">
+Canis erstellt personalisierte Trainingspläne für dich und deinen Hund.
+Die KI berücksichtigt Rasse, Alter, Trainingsstand, bekannte Herausforderungen
+und deinen bevorzugten Trainingsort.
+</span>
+
+<span class="lang" id="en">
+Canis creates personalized training plans for you and your dog.
+The AI considers breed, age, training level, known challenges
+and your preferred training environment.
+</span>
+
 </p>
 
 <div class="cta">
 
-<a class="button"
-data-de="App laden"
-data-en="Download App">
-App laden
+<a class="button">
+
+<span class="lang" id="de">App laden</span>
+<span class="lang" id="en">Download App</span>
+
 </a>
 
 </div>
@@ -226,20 +283,36 @@ App laden
 
 <section class="features container">
 
-<h2 style="text-align:center;font-size:34px;"
-data-de="Trainingspläne, die wirklich zu deinem Hund passen"
-data-en="Training plans tailored to your dog">
+<h2 style="text-align:center;font-size:34px;">
+
+<span class="lang" id="de">
+Trainingspläne, die wirklich zu deinem Hund passen
+</span>
+
+<span class="lang" id="en">
+Training plans tailored to your dog
+</span>
+
 </h2>
 
 <div class="feature-grid">
 
 <div class="feature">
 
-<h3 data-de="🐕 Individuelle Analyse"
-data-en="🐕 Individual analysis"></h3>
+<h3>🐕</h3>
 
-<p data-de="Die KI berücksichtigt Rasse, Alter, Trainingsstand und bekannte Schwierigkeiten deines Hundes."
-data-en="The AI considers your dog's breed, age, training level and known challenges.">
+<p>
+
+<span class="lang" id="de">
+Die KI analysiert Alter, Rasse und Trainingsstand deines Hundes
+und erstellt darauf basierend einen individuellen Trainingsplan.
+</span>
+
+<span class="lang" id="en">
+The AI analyzes your dog's age, breed and training level
+to generate an individualized training plan.
+</span>
+
 </p>
 
 </div>
@@ -247,11 +320,20 @@ data-en="The AI considers your dog's breed, age, training level and known challe
 
 <div class="feature">
 
-<h3 data-de="📅 Dynamische Trainingspläne"
-data-en="📅 Dynamic training plans"></h3>
+<h3>📅</h3>
 
-<p data-de="Dein Trainingsplan wird automatisch angepasst – abhängig von Fortschritt, Feedback und Trainingsverlauf."
-data-en="Your training plan adapts automatically based on progress, feedback and training history.">
+<p>
+
+<span class="lang" id="de">
+Trainingspläne passen sich automatisch an Fortschritt,
+Feedback und Trainingsverlauf an.
+</span>
+
+<span class="lang" id="en">
+Training plans adapt automatically based on progress,
+feedback and training history.
+</span>
+
 </p>
 
 </div>
@@ -259,11 +341,20 @@ data-en="Your training plan adapts automatically based on progress, feedback and
 
 <div class="feature">
 
-<h3 data-de="🎥 Videoanalyse"
-data-en="🎥 Video analysis"></h3>
+<h3>🎥</h3>
 
-<p data-de="Lade Trainingsvideos hoch und erhalte detailliertes Feedback zu Timing, Körpersprache und Trainingsstruktur."
-data-en="Upload training videos and receive detailed feedback about timing, body language and training structure.">
+<p>
+
+<span class="lang" id="de">
+Lade Trainingsvideos hoch und erhalte detailliertes
+KI-Feedback zu Timing und Körpersprache.
+</span>
+
+<span class="lang" id="en">
+Upload training videos and receive detailed
+AI feedback about timing and body language.
+</span>
+
 </p>
 
 </div>
@@ -271,11 +362,20 @@ data-en="Upload training videos and receive detailed feedback about timing, body
 
 <div class="feature">
 
-<h3 data-de="📍 Trainingsumgebung"
-data-en="📍 Training environment"></h3>
+<h3>📍</h3>
 
-<p data-de="Ob Wohnung, Garten oder Hundeplatz – die KI berücksichtigt deinen bevorzugten Trainingsort."
-data-en="Whether at home, in the garden or on a training field – the AI adapts to your training environment.">
+<p>
+
+<span class="lang" id="de">
+Die KI berücksichtigt deine Trainingsumgebung –
+Wohnung, Garten oder Hundeplatz.
+</span>
+
+<span class="lang" id="en">
+The AI adapts to your training environment –
+home, garden or training field.
+</span>
+
 </p>
 
 </div>
@@ -289,8 +389,12 @@ data-en="Whether at home, in the garden or on a training field – the AI adapts
 
 <section class="screens">
 
-<h2 data-de="Ein Blick in die App"
-data-en="Take a look inside the app"></h2>
+<h2>
+
+<span class="lang" id="de">Ein Blick in die App</span>
+<span class="lang" id="en">Inside the App</span>
+
+</h2>
 
 <div class="screenshot-row">
 
@@ -307,11 +411,24 @@ data-en="Take a look inside the app"></h2>
 
 <section class="download">
 
-<h2 data-de="Starte dein Training heute"
-data-en="Start your training today"></h2>
+<h2>
 
-<p data-de="Verbessere dein Hundetraining mit personalisierten KI-Trainingsplänen."
-data-en="Improve your dog training with personalized AI training plans."></p>
+<span class="lang" id="de">Starte dein Training heute</span>
+<span class="lang" id="en">Start your training today</span>
+
+</h2>
+
+<p>
+
+<span class="lang" id="de">
+Verbessere dein Hundetraining mit personalisierten KI-Trainingsplänen.
+</span>
+
+<span class="lang" id="en">
+Improve your dog training with personalized AI training plans.
+</span>
+
+</p>
 
 <div class="store-buttons">
 
@@ -338,18 +455,36 @@ data-en="Improve your dog training with personalized AI training plans."></p>
 
 <script>
 
-function setLang(lang){
+function switchLang(lang){
 
-document.querySelectorAll("[data-de]").forEach(el=>{
+document.querySelectorAll('.lang').forEach(el => {
+el.classList.remove('active');
+});
 
-el.innerText = el.getAttribute("data-"+lang)
+document.querySelectorAll('#'+lang).forEach(el=>{
+el.classList.add('active');
+});
 
-})
+}
+
+const params = new URLSearchParams(window.location.search);
+const langParam = params.get("lang");
+
+if(langParam === "de" || langParam === "en"){
+switchLang(langParam);
+}else{
+
+const userLang = navigator.language || navigator.userLanguage;
+
+if(userLang.startsWith('de')){
+switchLang('de');
+}else{
+switchLang('en');
+}
 
 }
 
 </script>
-
 
 </body>
 </html>
